@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YandexTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8xs-aF-SZ2">
+                                <rect key="frame" x="0.0" y="24" width="414" height="72"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Яндекс Переводчик" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-Kd-JVd">
+                                        <rect key="frame" x="135.66666666666666" y="38" width="142.99999999999997" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="6AF-fp-U14"/>
+                                            <constraint firstAttribute="width" constant="143" id="usu-jE-gkH"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Ssz-np-7BJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ieo-Kd-JVd" secondAttribute="bottom" constant="13" id="luL-hU-6CB"/>
+                                    <constraint firstItem="ieo-Kd-JVd" firstAttribute="centerX" secondItem="8xs-aF-SZ2" secondAttribute="centerX" id="vda-Cn-SUc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2L-9d-uV7" customClass="RoundedUIView" customModule="YandexTranslator">
+                                <rect key="frame" x="4" y="802" width="406" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Английский" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OCi-h0-wVP" customClass="TextField" customModule="YandexTranslator" customModuleProvider="target">
+                                        <rect key="frame" x="58" y="12" width="303" height="20"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="264" id="QXn-55-AkX"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNO-0h-bzU" customClass="ChangeLanguageButton" customModule="YandexTranslator" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="4" width="46" height="36"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="JhC-rN-1ic"/>
+                                            <constraint firstAttribute="height" constant="36" id="kY7-d8-TNV"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="changeLanguageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Utu-Tq-7mY"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="RussianImage" translatesAutoresizingMaskIntoConstraints="NO" id="LeT-XC-qc3" customClass="RoundedUIImageView" customModule="YandexTranslator" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="6" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="320-zu-eCp"/>
+                                            <constraint firstAttribute="width" constant="32" id="sV3-2m-hCn"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.97999999999999998" green="0.97999999999999998" blue="0.97999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="EnglishImage" translatesAutoresizingMaskIntoConstraints="NO" id="2Ob-AZ-Eqr" customClass="RoundedUIImageView" customModule="YandexTranslator" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="6" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="BhK-cV-Y69"/>
+                                            <constraint firstAttribute="width" constant="32" id="pYT-t7-vhH"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFt-sr-Cm7">
+                                        <rect key="frame" x="378" y="11" width="12" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="j01-RS-fj2"/>
+                                            <constraint firstAttribute="height" constant="22" id="q79-x6-kD8"/>
+                                        </constraints>
+                                        <state key="normal" image="SpeekButton"/>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X13-mx-cNT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.48999999999999999" blue="0.91000000000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="RNO-0h-bzU" firstAttribute="leading" secondItem="c2L-9d-uV7" secondAttribute="leading" constant="4" id="79L-1c-TS9"/>
+                                    <constraint firstItem="2Ob-AZ-Eqr" firstAttribute="centerY" secondItem="c2L-9d-uV7" secondAttribute="centerY" id="7ap-nu-94H"/>
+                                    <constraint firstAttribute="bottom" secondItem="RNO-0h-bzU" secondAttribute="bottom" constant="4" id="98L-cK-dEH"/>
+                                    <constraint firstItem="OCi-h0-wVP" firstAttribute="leading" secondItem="RNO-0h-bzU" secondAttribute="trailing" constant="8" id="GtW-vd-umg"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFt-sr-Cm7" secondAttribute="trailing" constant="16" id="JJD-LF-w6F"/>
+                                    <constraint firstItem="RNO-0h-bzU" firstAttribute="top" secondItem="c2L-9d-uV7" secondAttribute="top" constant="4" id="Ngn-4q-4cu"/>
+                                    <constraint firstAttribute="height" constant="44" id="RHq-A7-qen"/>
+                                    <constraint firstItem="OCi-h0-wVP" firstAttribute="top" secondItem="c2L-9d-uV7" secondAttribute="top" constant="12" id="Vu6-7V-Ie1"/>
+                                    <constraint firstItem="wFt-sr-Cm7" firstAttribute="centerY" secondItem="c2L-9d-uV7" secondAttribute="centerY" id="koc-pc-dl9"/>
+                                    <constraint firstItem="wFt-sr-Cm7" firstAttribute="leading" secondItem="OCi-h0-wVP" secondAttribute="trailing" constant="17" id="tZ1-Dg-sPo"/>
+                                    <constraint firstAttribute="bottom" secondItem="OCi-h0-wVP" secondAttribute="bottom" constant="12" id="wpO-rv-Box"/>
+                                    <constraint firstItem="LeT-XC-qc3" firstAttribute="centerY" secondItem="c2L-9d-uV7" secondAttribute="centerY" id="zqo-eE-tR6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.47999999999999998" blue="0.94999999999999996" alpha="0.19959332190000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-pu-ZDL">
+                                <rect key="frame" x="12" y="104" width="390" height="690"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FromEnglishToRussianMessageCell" rowHeight="76" id="XD2-3p-FaL" customClass="FromEnglishToRussianCell" customModule="YandexTranslator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="76"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XD2-3p-FaL" id="aUR-V7-Vjh">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmk-QM-hP6" customClass="FromEnglishToRussianView" customModule="YandexTranslator" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="64"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV4-iK-nGO">
+                                                            <rect key="frame" x="11.999999999999993" y="10" width="105.33333333333331" height="18"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                            <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="0.80460723458904104" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ho-K9-ACZ">
+                                                            <rect key="frame" x="11.999999999999993" y="30" width="105.33333333333331" height="24"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                            <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.0" green="0.48999999999999999" blue="0.91000000000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="9Ho-K9-ACZ" secondAttribute="bottom" constant="10" id="B94-Bv-a1j"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="210" id="Nc6-yk-bLx"/>
+                                                        <constraint firstItem="9Ho-K9-ACZ" firstAttribute="leading" secondItem="Wmk-QM-hP6" secondAttribute="leading" constant="12" id="Zgq-mQ-Qff"/>
+                                                        <constraint firstAttribute="trailing" secondItem="yV4-iK-nGO" secondAttribute="trailing" constant="12" id="ajQ-Fp-ki9"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9Ho-K9-ACZ" secondAttribute="trailing" constant="12" id="dCL-Na-F9O"/>
+                                                        <constraint firstItem="yV4-iK-nGO" firstAttribute="top" secondItem="Wmk-QM-hP6" secondAttribute="top" constant="10" id="f8k-MZ-Kfa"/>
+                                                        <constraint firstItem="yV4-iK-nGO" firstAttribute="leading" secondItem="Wmk-QM-hP6" secondAttribute="leading" constant="12" id="kIp-Mm-mmc"/>
+                                                        <constraint firstItem="9Ho-K9-ACZ" firstAttribute="top" secondItem="yV4-iK-nGO" secondAttribute="bottom" constant="2" id="s8m-jI-eBf"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Wmk-QM-hP6" firstAttribute="top" secondItem="aUR-V7-Vjh" secondAttribute="top" id="82V-ag-Hln"/>
+                                                <constraint firstItem="Wmk-QM-hP6" firstAttribute="leading" secondItem="aUR-V7-Vjh" secondAttribute="leading" id="9e5-Tj-e9s"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wmk-QM-hP6" secondAttribute="bottom" constant="12" id="YGn-Fb-Iuq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <edgeInsets key="layoutMargins" top="12" left="0.0" bottom="0.0" right="0.0"/>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="yV4-iK-nGO" id="qgq-9Q-yo5"/>
+                                            <outlet property="translationLabel" destination="9Ho-K9-ACZ" id="XCN-8d-1HX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FromRussianToEnglishMessageCell" rowHeight="76" id="N89-S1-UxV" customClass="FromRussianToEnglishCell" customModule="YandexTranslator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="104" width="390" height="76"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N89-S1-UxV" id="iGd-Af-5vH">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcD-Cg-EZB" customClass="FromRussianToEnglishView" customModule="YandexTranslator" customModuleProvider="target">
+                                                    <rect key="frame" x="260.66666666666669" y="0.0" width="129.33333333333331" height="64"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQA-5y-6Vc">
+                                                            <rect key="frame" x="11.999999999999993" y="10" width="105.33333333333331" height="18"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                            <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="0.80460723460000005" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEd-tX-qEx">
+                                                            <rect key="frame" x="11.999999999999993" y="30" width="105.33333333333331" height="24"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                            <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.93000000000000005" green="0.29999999999999999" blue="0.35999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="fEd-tX-qEx" secondAttribute="trailing" constant="12" id="HUn-Fg-ukd"/>
+                                                        <constraint firstItem="fEd-tX-qEx" firstAttribute="top" secondItem="AQA-5y-6Vc" secondAttribute="bottom" constant="2" id="HWg-Z4-GiI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="AQA-5y-6Vc" secondAttribute="trailing" constant="12" id="SG5-Hy-3XS"/>
+                                                        <constraint firstItem="AQA-5y-6Vc" firstAttribute="leading" secondItem="KcD-Cg-EZB" secondAttribute="leading" constant="12" id="WpY-oN-Ju3"/>
+                                                        <constraint firstItem="fEd-tX-qEx" firstAttribute="leading" secondItem="KcD-Cg-EZB" secondAttribute="leading" constant="12" id="a2O-5U-DpF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="fEd-tX-qEx" secondAttribute="bottom" constant="10" id="cyp-sm-a8c"/>
+                                                        <constraint firstItem="AQA-5y-6Vc" firstAttribute="top" secondItem="KcD-Cg-EZB" secondAttribute="top" constant="10" id="udt-HB-8as"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="210" id="xgE-wO-Oe8"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="KcD-Cg-EZB" secondAttribute="trailing" id="Pue-HK-j9F"/>
+                                                <constraint firstItem="KcD-Cg-EZB" firstAttribute="top" secondItem="iGd-Af-5vH" secondAttribute="top" id="bLI-GJ-VCo"/>
+                                                <constraint firstAttribute="bottom" secondItem="KcD-Cg-EZB" secondAttribute="bottom" constant="12" id="es1-If-UYe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="AQA-5y-6Vc" id="5dE-5R-NAp"/>
+                                            <outlet property="translationLabel" destination="fEd-tX-qEx" id="FCt-mt-WLT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="yWy-55-nFJ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="IEC-HX-kC5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jKQ-pu-ZDL" firstAttribute="top" secondItem="8xs-aF-SZ2" secondAttribute="bottom" constant="8" id="1IK-F5-HIv"/>
+                            <constraint firstItem="c2L-9d-uV7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2sa-dg-p1F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c2L-9d-uV7" secondAttribute="trailing" constant="4" id="GQj-xG-Clc"/>
+                            <constraint firstItem="8xs-aF-SZ2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="IH3-lC-5sX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="8xs-aF-SZ2" secondAttribute="top" constant="20" id="U67-q9-Rxl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jKQ-pu-ZDL" secondAttribute="trailing" constant="12" id="bY5-kz-f3n"/>
+                            <constraint firstItem="c2L-9d-uV7" firstAttribute="top" secondItem="jKQ-pu-ZDL" secondAttribute="bottom" constant="8" id="m0g-PU-dLu"/>
+                            <constraint firstItem="jKQ-pu-ZDL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="mnI-Ro-31R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c2L-9d-uV7" secondAttribute="bottom" constant="16" id="nIc-aj-F0o"/>
+                            <constraint firstItem="c2L-9d-uV7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="qw9-mv-23o"/>
+                            <constraint firstItem="8xs-aF-SZ2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rpQ-aW-l0l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeLanguageButton" destination="RNO-0h-bzU" id="gCk-2M-SZd"/>
+                        <outlet property="englishImage" destination="2Ob-AZ-Eqr" id="RgB-Ws-ffm"/>
+                        <outlet property="roundedUIView" destination="c2L-9d-uV7" id="PK2-Oc-PQc"/>
+                        <outlet property="russianImage" destination="LeT-XC-qc3" id="KeC-v0-1H8"/>
+                        <outlet property="speakOrSendMessageButton" destination="wFt-sr-Cm7" id="dtv-wF-yg5"/>
+                        <outlet property="tableView" destination="jKQ-pu-ZDL" id="Iyx-7B-bVd"/>
+                        <outlet property="textField" destination="OCi-h0-wVP" id="ZSx-J9-MSR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81.159420289855078" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="EnglishImage" width="32" height="32"/>
+        <image name="RussianImage" width="32" height="32"/>
+        <image name="SpeekButton" width="12" height="16"/>
+        <image name="Яндекс Переводчик" width="143" height="21.333333969116211"/>
+    </resources>
+</document>
